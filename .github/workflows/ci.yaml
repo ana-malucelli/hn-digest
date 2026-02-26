@@ -1,0 +1,29 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+
+jobs:
+
+  # TODO: add a lint job
+  # It should:
+  # - check out the code
+  # - install ruff
+  # - run ruff on src/ and tests/
+
+  # TODO: add a test job
+  # It should:
+  # - check out the code
+  # - install python dependencies including dev group
+  # - run pytest with coverage
+  # - fail the workflow if coverage drops below 80%
+
+  # TODO: add a build job (runs only on push to main)
+  # It should:
+  # - check out the code
+  # - build the Docker image
+  # Hint: look at how dbt-app does it with docker/build-push-action
